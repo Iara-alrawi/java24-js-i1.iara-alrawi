@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pig Dice Game</title>
+    <style>
+        body {font-family: Arial, Helvetica, sans-serif; padding: 20px}
+        .hidden {display: none;}
+        #game{margin-top: 20px;}
+        .button {padding: 10px; background-color: aqua; color: white; cursor: pointer; margin: 5px;}
+    </style>
+</head>
+<body>
+
+    <h1>Tärningsspelet Pig</h1>
+
+    <form id="player-form">
+        <label for="playerName"> Ange ditt namn:</label>
+        <input type="text" id="playerName" required/>
+        <button type="submit"> Starta spelet</button>
+    </form>
+
+    <div id="game" class="hidden">
+        <h2>Välkommen, <span id="name"></span!></h2>
+            <p><strong>Totalpoäng:</strong><span id="totalScore">0</span></p>
+            <p><strong>Omgångspoäng:</strong> <span id="roundScore">0</span></p>
+            <p><strong>Antal omgångar:</strong> <span id="rounds">0</span></p>
+            <p><strong>Senaste tärningskastet:</strong> <span id="dice">-</span></p>
+
+            <div>
+                <div id="roll" class="button">Kasta tärningen</div>
+                <div id="hold" class="button">Frys poäng</div>
+            </div>
+
+            <h3 id="message"></h3>
+    </div>
+
+    <script src="./javascript_dice/dice.js"></script>
+    
+</body>
+</html>
